@@ -15,10 +15,13 @@ function App() {
     <>
       <GlobalStyles />
       <StyledApp>
-        <Heading>The Obscure House</Heading>
+        <Heading type="h1">The Obscure House</Heading>
+
+        <Heading type="h2">Check in and out</Heading>
         <Button onClick={() => alert("Check in")}>Check in</Button>
         <Button onClick={() => alert("Check out")}>Check out</Button>
 
+        <Heading type="h3">Form</Heading>
         <Input type="number" placeholder="Number of guests" />
         <Input type="number" placeholder="Number of guests" />
       </StyledApp>
