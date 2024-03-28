@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import GlobalStyle from "./styles/GlobalStyles";
 // reuseable component
 const H1 = styled.h1`
   font-size: 30px;
@@ -32,13 +33,17 @@ const StyledApp = styled.main`
 
 function App() {
   return (
-    <StyledApp>
-      <H1>The Obscure House</H1>
-      <Button>Check in</Button>
-      <Button>Check out</Button>
+    <>
+      <GlobalStyle />
+      <StyledApp>
+        <H1>The Obscure House</H1>
+        <Button onClick={() => alert("Check in")}>Check in</Button>
+        <Button onClick={() => alert("Check out")}>Check out</Button>
 
-      <Input type="number" placeholder="Number of guests" />
-    </StyledApp>
+        <Input type="number" placeholder="Number of guests" />
+        <Input type="number" placeholder="Number of guests" />
+      </StyledApp>
+    </>
   );
 }
 export default App;
