@@ -17,6 +17,12 @@ const Button = styled.button`
 
   margin: 20px;
 `;
+// reuseable Input box
+const Input = styled.input`
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.8rem 1.2rem;
+`;
 
 function App() {
   return (
@@ -24,6 +30,8 @@ function App() {
       <H1>The Obscure House</H1>
       <Button>Check in</Button>
       <Button>Check out</Button>
+
+      <Input type="number" placeholder="Number of guests" />
     </div>
   );
 }
