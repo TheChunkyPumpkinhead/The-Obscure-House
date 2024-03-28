@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
 
 /* Colors adapted from https://tailwindcss.com/docs/customizing-colors */
 
+
+
+/* premade color tokens */
 :root {
   /* Indigo */
   --color-brand-50: #eef2ff;
