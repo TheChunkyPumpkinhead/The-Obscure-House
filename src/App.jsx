@@ -2,13 +2,7 @@ import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 import Button from "./ui/Button";
 import Input from "./ui/Input";
-
-// reuseable component
-const H1 = styled.h1`
-  font-size: 30px;
-  font-weight: 600;
-  background-color: yellow;
-`;
+import Heading from "./ui/Heading";
 
 // this component styles the main App component
 const StyledApp = styled.main`
@@ -21,7 +15,7 @@ function App() {
     <>
       <GlobalStyles />
       <StyledApp>
-        <H1>The Obscure House</H1>
+        <Heading>The Obscure House</Heading>
         <Button onClick={() => alert("Check in")}>Check in</Button>
         <Button onClick={() => alert("Check out")}>Check out</Button>
 
