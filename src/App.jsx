@@ -24,15 +24,21 @@ const Input = styled.input`
   padding: 0.8rem 1.2rem;
 `;
 
+// this component styles the main App component
+const StyledApp = styled.main`
+  background-color: orangered;
+  padding: 20px;
+`;
+
 function App() {
   return (
-    <div>
+    <StyledApp>
       <H1>The Obscure House</H1>
       <Button>Check in</Button>
       <Button>Check out</Button>
 
       <Input type="number" placeholder="Number of guests" />
-    </div>
+    </StyledApp>
   );
 }
 export default App;
