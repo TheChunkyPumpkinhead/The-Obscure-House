@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 
 const NavList = styled.ul`
@@ -49,7 +51,12 @@ function MainNav() {
   return (
     <nav>
       <NavList>
-        <li>Link</li>
+        <li>
+          <NavLink to="/dashboard"> Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/bookings"> Bookings</NavLink>
+        </li>
       </NavList>
     </nav>
   );
