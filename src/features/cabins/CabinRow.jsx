@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import CabinRow from "./CabinRow";
 
 const TableRow = styled.div`
   display: grid;
@@ -38,3 +39,17 @@ const Discount = styled.div`
   font-weight: 500;
   color: var(--color-green-700);
 `;
+1;
+
+function CabinRow({ cabin }) {
+  const { name, maxCapacity, regularPrice, discount, image } = cabin;
+  return (
+    <TableRow role="row">
+      <Img src={image} />
+      <Cabin>(name)</Cabin>
+      <div>Fits up to {maxCapacity} guests</div>
+    </TableRow>
+  );
+}
+
+export default CabinRow;
