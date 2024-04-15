@@ -45,10 +45,18 @@ const Discount = styled.div`
 1;
 
 function CabinRow({ cabin }) {
-  const { name, maxCapacity, regularPrice, discount, image } = cabin;
+  const {
+    id: cabinId,
+    name,
+    maxCapacity,
+    regularPrice,
+    discount,
+    image,
+  } = cabin;
 
-  const { isLoading, mutate } = useMutation({
-    mutationFn: (id) => deleteCabin(id),
+  const { isLoading: isDeleting, mutate } = useMutation({
+    mutationFn: deleteCabin,
+    onSucess: () =>
   });
 
   return (
@@ -58,7 +66,9 @@ function CabinRow({ cabin }) {
       <div>Fits up to {maxCapacity} guests</div>
       <Price>{formatCurrency(regularPrice)}</Price>
       <Discount>{formatCurrency(discount)}</Discount>
-      <button onClick={() => mutate()}>Delete</button>
+      <button onClick={() => mutate(cabinId)} disabled={isDeleting}>
+        Delete
+      </button>
     </TableRow>
   );
 }
