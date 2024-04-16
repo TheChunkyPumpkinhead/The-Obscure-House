@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import CabinRow from "./CabinRow";
+
 import { formatCurrency } from "../../utils/helpers";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteCabin } from "../../services/apiCabins";
@@ -67,7 +67,7 @@ function CabinRow({ cabin }) {
     },
     onError: (err) => toast.error(err.message),
   });
-
+  // This is what is shown on screen
   return (
     <TableRow role="row">
       <Img src={image} />
