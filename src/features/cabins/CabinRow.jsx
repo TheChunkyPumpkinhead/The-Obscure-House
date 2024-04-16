@@ -43,7 +43,6 @@ const Discount = styled.div`
   color: var(--color-green-700);
 `;
 
-// eslint-disable-next-line react/prop-types
 function CabinRow({ cabin }) {
   const {
     id: cabinId,
@@ -58,7 +57,7 @@ function CabinRow({ cabin }) {
 
   const { isLoading: isDeleting, mutate } = useMutation({
     mutationFn: deleteCabin,
-    onSucess: () => {
+    onSuccess: () => {
       alert("Cabin successfully deleted");
 
       queryClient.invalidateQueries({
