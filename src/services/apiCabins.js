@@ -12,9 +12,8 @@ export async function getCabins() {
 }
 
 export async function createCabin(newCabin) {
-  const { data, error } = await supabase
-    .from("cabins")
-    .insert([{ some_column: "someValue", other_column: "otherValue" }]);
+  const { data, error } = await supabase.from("cabins").insert([newCabin]);
+  // Problem-This was added when copied from supabase to inset
   // .select();
   if (error) {
     console.error(error);
