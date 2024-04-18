@@ -46,7 +46,9 @@ const Error = styled.span`
 function CreateCabinForm() {
   const { register, handleSubmit } = useForm();
 
-  function onSubmit(data) {}
+  function onSubmit(data) {
+    console.log(data);
+  }
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -95,7 +97,7 @@ function CreateCabinForm() {
         <Button variation="secondary" type="reset">
           Cancel
         </Button>
-        <Button>Edit cabin</Button>
+        <Button>Add cabin</Button>
       </FormRow>
     </Form>
   );
