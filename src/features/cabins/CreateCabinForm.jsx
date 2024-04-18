@@ -49,7 +49,7 @@ function CreateCabinForm() {
   function onSubmit(data) {}
 
   return (
-    <Form onSubmit={handleSubmit()}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow>
         <Label htmlFor="name">Cabin name</Label>
         <Input type="text" id="name" {...register("name")} />
