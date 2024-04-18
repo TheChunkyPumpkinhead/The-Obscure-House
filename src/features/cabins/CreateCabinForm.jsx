@@ -46,8 +46,10 @@ const Error = styled.span`
 function CreateCabinForm() {
   const { register, handleSubmit } = useForm();
 
+  function onSubmit(data) {}
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit()}>
       <FormRow>
         <Label htmlFor="name">Cabin name</Label>
         <Input type="text" id="name" {...register("name")} />
