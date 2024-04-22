@@ -6,6 +6,7 @@ import Button from "../../ui/Button";
 import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
 import { useForm } from "react-hook-form";
+import { createCabin } from "../../services/apiCabins";
 // import { createCabin } from "../../services/apiCabins";
 
 const FormRow = styled.div`
@@ -45,7 +46,12 @@ const Error = styled.span`
 `;
 
 function CreateCabinForm() {
-  const { mutate, isLoading } = useMutation({});
+  const { mutate, isLoading } = useMutation({
+    mutationFn: createCabin,
+    onSuccess: () => {
+      toast.success("New cabin successfully created");
+    },
+  });
 
   const { register, handleSubmit } = useForm();
 
