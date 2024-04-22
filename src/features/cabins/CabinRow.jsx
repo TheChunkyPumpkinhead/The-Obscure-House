@@ -52,7 +52,18 @@ function CabinRow({ cabin }) {
     discount,
     image,
   } = cabin;
+  // const courtney {
+  //   id: cabinId,
+  //   name,
+  //   maxCapacity,
+  //   regularPrice,
+  //   discount,
+  //   image,
+  // } = cabin;
+  // cabin = courtney;
 
+  // set const to a name, and then use that name to set courtney = cabin,
+  //  or just use courtney wherever you were going to use cabin
   const queryClient = useQueryClient();
 
   const { isLoading: isDeleting, mutate } = useMutation({
