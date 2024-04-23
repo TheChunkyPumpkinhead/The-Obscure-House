@@ -87,6 +87,7 @@ function CreateCabinForm() {
             },
           })}
         />
+        {errors?.name?.message && <Error>{errors.name.message}</Error>}
       </FormRow>
 
       <FormRow>
