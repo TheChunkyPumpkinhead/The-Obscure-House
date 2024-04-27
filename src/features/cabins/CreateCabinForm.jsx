@@ -75,9 +75,8 @@ function CreateCabinForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
-      <FormRow>
-        <Label htmlFor="name">Cabin name</Label>
-        <Input
+      <FormRow label="Cabin name" error={errors?.name?.message}>
+      <Input
           type="text"
           id="name"
           {...register("name", {
@@ -87,10 +86,13 @@ function CreateCabinForm() {
             },
           })}
         />
-        {errors?.name?.message && <Error>{errors.name.message}</Error>}
-      </FormRow>
-
-      <FormRow>
+       <FormRow />
+      
+      
+      
+      
+      
+      <FormRow label="MAximun capacity" error={errors?.maxCapacity?.message}>
         <Label htmlFor="maxCapacity">Maximum capacity</Label>
         <Input
           type="number"
