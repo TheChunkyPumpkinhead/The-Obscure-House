@@ -75,8 +75,8 @@ function CreateCabinForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
-      <FormRow> <Label="Cabin name" error={errors?.name?.message}</Label>
-      <Input
+      <FormRow label="Cabin name" error={errors?.maxCapacity?.message}>
+        <Input
           type="text"
           id="name"
           {...register("name", {
@@ -86,13 +86,9 @@ function CreateCabinForm() {
             },
           })}
         />
-       <FormRow />
-      
-      
-      
-      
-      
-      <FormRow label="MAximun capacity" error={errors?.maxCapacity?.message}>
+      </FormRow>
+
+      <FormRow label="Maximun capacity" error={errors?.maxCapacity?.message}>
         <Label htmlFor="maxCapacity">Maximum capacity</Label>
         <Input
           type="number"
@@ -107,7 +103,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow label="Regular Price" error={errors?.maxCapacity?.message}>
         <Label htmlFor="regularPrice">Regular price</Label>
         <Input
           type="number"
@@ -122,7 +118,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow label="Discount" error={errors?.maxCapacity?.message}>
         <Label htmlFor="discount">Discount</Label>
         <Input
           type="number"
@@ -137,7 +133,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow label="Maximun capacity" error={errors?.maxCapacity?.message}>
         <Label htmlFor="description">Description for website</Label>
         <Textarea
           type="text"
