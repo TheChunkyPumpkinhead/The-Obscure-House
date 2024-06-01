@@ -75,7 +75,7 @@ function CreateCabinForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
-      <FormRow label="Cabin name" error={errors?.name?.message}>
+      <FormRow> <Label="Cabin name" error={errors?.name?.message}</Label>
       <Input
           type="text"
           id="name"
