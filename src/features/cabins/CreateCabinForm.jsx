@@ -133,7 +133,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Maximun capacity" error={errors?.maxCapacity?.message}>
+      <FormRow label="Description" error={errors?.maxCapacity?.message}>
         <Label htmlFor="description">Description for website</Label>
         <Textarea
           type="text"
