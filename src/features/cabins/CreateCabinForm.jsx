@@ -89,7 +89,6 @@ function CreateCabinForm() {
       </FormRow>
 
       <FormRow label="Maximun capacity" error={errors?.maxCapacity?.message}>
-        <Label htmlFor="maxCapacity">Maximum capacity</Label>
         <Input
           type="number"
           id="maxCapacity"
