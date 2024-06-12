@@ -54,3 +54,6 @@ function CabinTable() {
 }
 
 export default CabinTable;
+
+// Remember:
+// .map = method that generates lists
