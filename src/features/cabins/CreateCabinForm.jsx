@@ -75,7 +75,7 @@ function CreateCabinForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
-      <FormRow label="Cabin name" error={errors?.maxCapacity?.message}>
+      <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"
           id="name"
@@ -86,6 +86,7 @@ function CreateCabinForm() {
             },
           })}
         />
+        {errors?.name?.message && <Error>(errors.name.message)</Error>}
       </FormRow>
 
       <FormRow label="Maximun capacity" error={errors?.maxCapacity?.message}>
@@ -102,8 +103,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Regular Price" error={errors?.maxCapacity?.message}>
-        <Label htmlFor="regularPrice">Regular price</Label>
+      <FormRow label="Regular Price" error={errors?.regularPrice?.message}>
         <Input
           type="number"
           id="regularPrice"
@@ -117,8 +117,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Discount" error={errors?.maxCapacity?.message}>
-        <Label htmlFor="discount">Discount</Label>
+      <FormRow label="Discount" error={errors?.discount?.message}>
         <Input
           type="number"
           id="discount"
@@ -132,8 +131,10 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Description" error={errors?.maxCapacity?.message}>
-        <Label htmlFor="description">Description for website</Label>
+      <FormRow
+        label="Description for website"
+        error={errors?.description?.message}
+      >
         <Textarea
           type="text"
           id="description"
@@ -144,8 +145,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="image">Cabin photo</Label>
+      <FormRow label="Cabin photo">
         <FileInput id="image" accept="image/*" />
       </FormRow>
 
